@@ -7,11 +7,13 @@ load_dotenv()
 
 backend_url = os.getenv(
     "backend_url",
-    default="https://puzeng-3030.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai",
+    default="https://puzeng-3030.theiadockernext-1-labs-prod-"+
+    "theiak8s-4-tor01.proxy.cognitiveclass.ai",
 )
 sentiment_analyzer_url = os.getenv(
     "sentiment_analyzer_url",
-    default="https://sentianalyzer.1qgkzyivll5o.us-south.codeengine.appdomain.cloud/",
+    default="https://sentianalyzer.1qgkzyivll5o."+
+    "us-south.codeengine.appdomain.cloud/",
 )
 
 
@@ -59,7 +61,8 @@ def post_review(data_dict):
         response = requests.post(request_url, json=data_dict)
         print(response.json())
         return response.json()
-    except:
+    except Exception as e:
+        print(e)
         print("Network exception occurred")
 
 
