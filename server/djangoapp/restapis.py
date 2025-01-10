@@ -7,12 +7,12 @@ load_dotenv()
 
 backend_url = os.getenv(
     "backend_url",
-    default="https://puzeng-3030.theiadockernext-1-labs-prod-"+
+    default="https://puzeng-3030.theiadockernext-1-labs-prod-" +
     "theiak8s-4-tor01.proxy.cognitiveclass.ai",
 )
 sentiment_analyzer_url = os.getenv(
     "sentiment_analyzer_url",
-    default="https://sentianalyzer.1qgkzyivll5o."+
+    default="https://sentianalyzer.1qgkzyivll5o." +
     "us-south.codeengine.appdomain.cloud/",
 )
 
